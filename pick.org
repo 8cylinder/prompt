@@ -1,0 +1,71 @@
+
+
+* elements
+
+- app
+  - style
+    - name
+    - prompt
+    - picker rows
+      - fg
+      - bg
+      - bold
+
+- app
+- style
+  - prop: title
+  - prop: prompt
+  - prop: picker_rows
+- picker_row
+  - prop: section_name
+  - prop: color_picker
+  - prop: style_toggle
+
+* hierarchy
+- *Style*
+  - Title
+  - *Prompt*
+  - *Segment* (X 6)
+    - Title
+    - *Color* X 2
+    - *Toggle* X 3
+
+* Components
+- Style
+- Segment
+  - Args: title, fg, bg, bold, ...
+- ColorPicker
+  - Args: title, color value
+- Toggle
+  - Args: title, toggle state
+
+
+* ui
+
+_Default_
+
+[eddies] [ssh] sm@linux-desktop ~/work/CoalecentDesign/eddies/eddies-GIT
+>
+
+*Sink project* : fg [-], bg [-], _bold_, _underline_, _italic_
+*User*         : fg [-], bg [-], _bold_, _underline_, _italic_
+*Path*         : fg [-], bg [-], _bold_, _underline_, _italic_
+*SSH*          : fg [-], bg [-], _bold_, _underline_, _italic_
+*Virtual*      : fg [-], bg [-], _bold_, _underline_, _italic_
+*Dollar*       : fg [-], bg [-]
+
+
+_Remote_
+
+[eddies] [ssh] sm@linux-desktop ~/work/CoalecentDesign/eddies/eddies-GIT
+>
+
+*Sink project* : fg [-], bg [-], bold [], underline [], italic []
+*User*         : fg [-], bg [-], bold [], underline [], italic []
+*Path*         : fg [-], bg [-], bold [], underline [], italic []
+*SSH*          : fg [-], bg [-], bold [], underline [], italic []
+*Virtual*      : fg [-], bg [-], bold [], underline [], italic []
+*Dollar*       : fg [-]
+
+                                                 [Save] [Close]
+
