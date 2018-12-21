@@ -26,7 +26,7 @@ export default{
         textDecoration: (this.d[name].underline) ? 'underline' : '',
       }
     },
-  }
+  },
 }
 </script>
 

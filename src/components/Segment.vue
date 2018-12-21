@@ -2,11 +2,25 @@
 <template>
   <tr>
     <td><strong>{{name}}</strong></td>
-    <td>fg: {{d.fg}}</td>
-    <td>bg: {{d.bg}}</td>
-    <td><span class="off" v-bind:class="{on: d.bold}" v-on:click="toggle_bold()">Bold</span></td>
-    <td><span class="off" v-bind:class="{on: d.italic}" v-on:click="toggle_italic()">Italic</span></td>
-    <td><span class="off" v-bind:class="{on: d.underline}" v-on:click="toggle_ul()">Underline</span></td>
+
+    <td>fg: <input v-model="d.fg" type="color"></td>
+    <td>bg: <input v-model="d.bg" type="color"></td>
+
+    <td>
+      <span class="off"
+            v-bind:class="{on: d.bold}"
+            v-on:click="toggle_bold()">Bold</span>
+    </td>
+    <td>
+      <span class="off"
+            v-bind:class="{on: d.italic}"
+            v-on:click="toggle_italic()">Italic</span>
+    </td>
+    <td>
+      <span class="off"
+            v-bind:class="{on: d.underline}"
+            v-on:click="toggle_ul()">Underline</span>
+    </td>
   </tr>
 </template>
 
@@ -36,14 +50,22 @@ p {
 }
 strong{
   display: inline-block;
-  /* min-width: 55px; */
-  /* margin-right: 1em; */
 }
 td{
   padding: 2px 10px;
 }
+span{
+  cursor: pointer;
+}
 </style>
 <style>
+input {
+  padding: 0px;
+  height: 20px;
+  width: 39px;
+  /* background-color: #1e1e1e; */
+  border: 0;
+}
 .on{
   color: white !important;
   font-weight: bold;
@@ -51,5 +73,11 @@ td{
 }
 .off{
   color: grey;
+}
+td:hover{
+  background-color: #393939;
+}
+tr:hover{
+  background-color: #2c2c2c;
 }
 </style>
