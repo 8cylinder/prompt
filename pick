@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+
+import click
+import webview
+import threading
+
+
+def get_themes():
+    with open('/home/sm/bin/bashrc_prompt.themes') as f:
+        j = f.read()
+    return j
+
+
+def load_html():
+    webview.load_url('dist/index.html')
+
+class Api():
+    def init(self):
+        print('initializing')
+        response = {
+            'message': 'doin an init.'
+        }
+        return response
+
+    def get_themes(self, params):
+        response = {
+            'themes': get_themes()
+        }
+        return response
+        # print(get_themes())
+
+    def save(self, data):
+        print(data)
+        print('cowza')
+
+    def close(self):
+        pass
+
+def init():
+    t = threading.Thread()
+    t.start()
+    api = Api()
+    webview.create_window('Bash prompt customizer', 'dist/index.html',
+                          js_api=api, min_size=(600, 450), debug=True)
+
+
+if __name__ == '__main__':
+    init()
