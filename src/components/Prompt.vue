@@ -1,6 +1,7 @@
 <!-- PROMPT -->
 
 <template>
+  <div>
   <p>
     <span v-bind:style="styles('sink')">[project]</span>
     <span v-bind:style="styles('virt')">[virt]</span>
@@ -9,7 +10,16 @@
     <span v-bind:style="styles('time')">12:00am</span>
     <span v-bind:style="styles('user')">user@server</span>
     <span v-bind:style="styles('path')">~/projects/someproject/src/compile</span>
+    <br>
+    <span v-bind:style="styles('dollar')">❖</span>
+    <br><br>
+    <span v-bind:style="styles('sink')">[project]</span>
+    <span v-bind:style="styles('user')">user@server</span>
+    <span v-bind:style="styles('path')">~/projects/someproject/src/compile</span>
+    <br>
+    <span v-bind:style="styles('dollar')">❖</span>
   </p>
+  </div>
 </template>
 
 

@@ -3,44 +3,41 @@
 import click
 import webview
 import threading
+from urllib import parse
+import json
 
 
+theme_file = '/home/sm/bin/bashrc_prompt.themes'
 def get_themes():
-    with open('/home/sm/bin/bashrc_prompt.themes') as f:
+    with open(theme_file) as f:
         j = f.read()
-    return j
+    p = parse.quote_plus(j)
+    return p
 
-
-def load_html():
-    webview.load_url('dist/index.html')
+def save_themes(data):
+    with open(theme_file, 'w') as f:
+        f.write(data)
 
 class Api():
-    def init(self):
-        print('initializing')
-        response = {
-            'message': 'doin an init.'
-        }
-        return response
+    theme_data = []
 
-    def get_themes(self, params):
-        response = {
-            'themes': get_themes()
-        }
-        return response
-        # print(get_themes())
+    def assemble(self):
+        data = ':'.join(self.theme_data)
+        data = json.dumps(json.loads(data), indent=2)
+        save_themes(data)
+        self.theme_data = []
 
     def save(self, data):
-        print(data)
-        print('cowza')
+        if data == '<!END!>':
+            self.assemble()
+        else:
+            self.theme_data.append(data)
 
-    def close(self):
-        pass
 
 def init():
-    t = threading.Thread()
-    t.start()
+    url = 'dist/index.html?data={}'.format(get_themes())
     api = Api()
-    webview.create_window('Bash prompt customizer', 'dist/index.html',
+    webview.create_window('Bash prompt customizer', url,
                           js_api=api, min_size=(600, 450), debug=True)
 
 
