@@ -44,9 +44,10 @@ p{
   background-color: black;
   color: white;
   font-family: mono;
-  padding: 10px 10px 10px 20px;
+  /*   padding: 10px 10px 10px 20px; */
   white-space: nowrap;
   overflow: hidden;
+  border: 10px solid black;
 }
 span{
   margin-right: 0.5em;

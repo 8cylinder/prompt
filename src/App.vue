@@ -56,12 +56,13 @@ body{
   color: #BFBFBF;
   background-color: #1E1E1E;
   font-family: mono;
+  margin: 20px;
 }
 </style>
 
 <style scoped>
 button {
   float: right;
-  margin: 0 20px 20px 0;
+  /* margin: 0 20px 20px 0; */
 }
 </style>
