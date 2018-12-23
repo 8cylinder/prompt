@@ -37,8 +37,11 @@ class Api():
 def init():
     url = 'dist/index.html?data={}'.format(get_themes())
     api = Api()
-    webview.create_window('Bash prompt customizer', url,
-                          js_api=api, min_size=(600, 450), debug=True)
+    try:
+        webview.create_window('Bash prompt customizer', url,
+                              js_api=api, min_size=(600, 450), debug=True)
+    except KeyboardInterrupt:
+        print(' Done')
 
 
 if __name__ == '__main__':

@@ -1,7 +1,6 @@
 <!-- PROMPT -->
 
 <template>
-  <div>
   <p>
     <span v-bind:style="styles('sink')">[project]</span>
     <span v-bind:style="styles('virt')">[virt]</span>
@@ -10,16 +9,15 @@
     <span v-bind:style="styles('time')">12:00am</span>
     <span v-bind:style="styles('user')">user@server</span>
     <span v-bind:style="styles('path')">~/projects/someproject/src/compile</span>
-    <br>
-    <span v-bind:style="styles('dollar')">❖</span>
+    <br><span v-bind:style="styles('dollar')">❖</span>
+    <span class="command">emacs -nw -q</span>
     <br><br>
     <span v-bind:style="styles('sink')">[project]</span>
     <span v-bind:style="styles('user')">user@server</span>
     <span v-bind:style="styles('path')">~/projects/someproject/src/compile</span>
-    <br>
-    <span v-bind:style="styles('dollar')">❖</span>
+    <br><span v-bind:style="styles('dollar')">❖</span>
+    <span class="command">ls --long --all</span>
   </p>
-  </div>
 </template>
 
 
@@ -47,8 +45,13 @@ p{
   color: white;
   font-family: mono;
   padding: 10px 10px 10px 20px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 span{
   margin-right: 0.5em;
+}
+.command{
+  color: #BABDB6
 }
 </style>

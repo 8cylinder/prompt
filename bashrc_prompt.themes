@@ -1,127 +1,15 @@
 {
-  "red": {
+  "Local": {
     "sink": {
-      "fg": "white",
-      "bg": "red",
+      "fg": "#1d87a5",
+      "bg": "#0d3a65",
       "bold": false,
       "italic": false,
       "underline": false
     },
     "virt": {
-      "fg": "208",
-      "bg": "52",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "user": {
-      "fg": "208",
-      "bg": "",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "path": {
-      "fg": "124",
-      "bg": "",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "ssh": {
-      "fg": "208",
-      "bg": "52",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "time": {
-      "fg": "124",
-      "bg": "",
-      "bold": false,
-      "italic": true,
-      "underline": false
-    },
-    "pipenv": {
-      "fg": "#46CC40",
-      "bg": "#24874B",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "dollar": {
-      "fg": "#FF764E",
-      "bg": "#6F2008",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    }
-  },
-  "blue": {
-    "sink": {
-      "fg": "45",
-      "bg": "27",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "virt": {
-      "fg": "blue",
-      "bg": "",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "user": {
-      "fg": "29",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "path": {
-      "fg": "39",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "ssh": {
-      "fg": "green",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "time": {
-      "fg": "39",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "pipenv": {
-      "fg": "#46CC40",
-      "bg": "#24874B",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "dollar": {
-      "fg": "#FF764E",
-      "bg": "#6F2008",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    }
-  },
-  "paleblue": {
-    "sink": {
-      "fg": "#4089CC",
-      "bg": "#23588A",
-      "bold": false,
-      "italic": false,
-      "underline": false
-    },
-    "virt": {
-      "fg": "blue",
-      "bg": "",
+      "fg": "#4089cc",
+      "bg": "#0d3a65",
       "bold": false,
       "italic": false,
       "underline": false
@@ -136,13 +24,13 @@
     "user": {
       "fg": "#88B76C",
       "bold": false,
-      "italic": false,
+      "italic": true,
       "underline": false
     },
     "path": {
       "fg": "#5D9FDE",
       "bold": false,
-      "italic": true,
+      "italic": false,
       "underline": false
     },
     "time": {
@@ -159,8 +47,66 @@
       "underline": false
     },
     "dollar": {
-      "fg": "#FF764E",
-      "bg": "#6F2008",
+      "fg": "#729fcf",
+      "bg": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    }
+  },
+  "Remote": {
+    "sink": {
+      "fg": "#1d87a5",
+      "bg": "#0d3a65",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "virt": {
+      "fg": "208",
+      "bg": "52",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "user": {
+      "fg": "#cc0000",
+      "bg": "",
+      "bold": false,
+      "italic": true,
+      "underline": false
+    },
+    "path": {
+      "fg": "#1d87a5",
+      "bg": "",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "ssh": {
+      "fg": "#cc0000",
+      "bg": "#420c05",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "time": {
+      "fg": "124",
+      "bg": "",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "pipenv": {
+      "fg": "#46CC40",
+      "bg": "#24874B",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "dollar": {
+      "fg": "#cc0000",
+      "bg": "#000000",
       "bold": false,
       "italic": false,
       "underline": false

@@ -690,9 +690,9 @@ def main(show_themes=False):
     # is_virt = chunk.virtual()
     is_ssh = chunk.ssh()
 
-    active_theme = themes['paleblue']
+    active_theme = themes['Local']
     if is_ssh:
-        active_theme = themes['red']
+        active_theme = themes['Remote']
 
     sections = OrderedDict([
         ['sink', chunk.sink_project()],

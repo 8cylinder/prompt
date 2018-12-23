@@ -3,8 +3,8 @@
   <tr>
     <td><strong>{{name}}</strong></td>
 
-    <td>fg: <input v-model="d.fg" type="color"></td>
-    <td>bg: <input v-model="d.bg" type="color"></td>
+    <td><input v-model="d.fg" type="color"></td>
+    <td><input v-model="d.bg" type="color"></td>
 
     <td>
       <span class="off"
@@ -60,11 +60,13 @@ span{
 </style>
 <style>
 input {
-  padding: 0px;
-  height: 20px;
+  color: #1E1E1E;
+  background-color: #1E1E1E;
+  padding: 0;
+  height: 30px;
   width: 39px;
-  /* background-color: #1e1e1e; */
   border: 0;
+  vertical-align: -4px;
 }
 .on{
   color: white !important;

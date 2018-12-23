@@ -33,7 +33,8 @@ export default {
 
 <style scoped>
 div{
-  margin-bottom: 3em;
+  clear: both;
+  margin-bottom: 2em;
 }
 h2{
   color: white;
